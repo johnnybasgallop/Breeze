@@ -23,8 +23,8 @@ struct ListCategory: Identifiable, Hashable {
     static func example(generalTitle : String, fakeJobName: String) -> ListCategory {
         ListCategory(name: generalTitle, jobs:[Job(name: fakeJobName, status: .todo, createdAt: Date.now, subTasks:[
             SubTask(name: "Stand up", status: .todo, createdAt: Date.now),
-            SubTask(name: "Walk outside", status: .todo, createdAt: Date.now),
-            SubTask(name: "Pick up the bin", status: .todo, createdAt: Date.now)
+            SubTask(name: "Walk outside", status: .inProgress, createdAt: Date.now),
+            SubTask(name: "Pick up the bin", status: .done, createdAt: Date.now)
         ]
                                                   )
         ]
@@ -63,6 +63,10 @@ enum JobStatus: Hashable, Identifiable{
         case .list(let listCat):
             listCat.id.uuidString
         }
-        
     }
+    
+    static var allCases: [JobStatus]{
+        [.inProgress,.todo,.done]
+    }
+    
 }

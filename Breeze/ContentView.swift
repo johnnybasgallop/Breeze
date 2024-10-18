@@ -2,7 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selected = "item1"
-    let ListCategories : [ListCategory]
+    @State private var ListCategories : [ListCategory] = [ListCategory.example(generalTitle: "General Chores", fakeJobName: "Take out the bins"), ListCategory.example(generalTitle: "Homework", fakeJobName: "Begin studying for AP final")]
+    
     @State private var Selection = JobStatus.todo
     
     var body: some View {
@@ -13,29 +14,24 @@ struct ContentView: View {
             Color.black.opacity(0.4)
                 .edgesIgnoringSafeArea(.all)
             
-            // Your content goes here
-            VStack {
-                NavigationSplitView {
-                    Sidebar(ListCategories: ListCategories, selection: $Selection )
-                } detail: {
-                    switch Selection {
-                    case .todo:
-                        Text("Todo")
-                    case .inProgress:
-                        Text("Todo")
-                    case .done:
-                        Text("Todo")
-                    case .list(let listCat):
-                        TaskView(Jobs: listCat.jobs)
-                    }
+            NavigationSplitView {
+                Sidebar(ListCategories: $ListCategories, selection: $Selection )
+            } detail: {
+                switch Selection {
+                case .todo:
+                    Text("Select a job to see relevant tasks")
+                case .inProgress:
+                    Text("Select a job to see relevant tasks")
+                case .done:
+                    Text("Select a job to see relevant tasks")
+                case .list(let listCat):
+                    TaskView(Jobs: listCat.jobs)
                 }
-
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 #Preview {
-    ContentView(ListCategories: [ListCategory.example(generalTitle: "General Chores", fakeJobName: "Take out the bins"), ListCategory.example(generalTitle: "Homework", fakeJobName: "Begin studying for AP final")])
+    ContentView()
 }

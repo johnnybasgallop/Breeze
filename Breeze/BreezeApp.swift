@@ -15,7 +15,7 @@ let screenHeight = NSScreen.main?.visibleFrame.size.height
 struct BreezeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView( ListCategories: [ListCategory.example(generalTitle: "General Chores", fakeJobName: "Take out the bins"), ListCategory.example(generalTitle: "Homework", fakeJobName: "Begin studying for AP final")])
+            ContentView()
                 .frame(minWidth: 650, maxWidth: 1000, minHeight: 500, maxHeight: screenHeight != nil ? screenHeight! - 20 : 900)
         }
         .defaultSize(width: 400, height: 400)

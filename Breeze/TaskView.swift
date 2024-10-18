@@ -10,13 +10,18 @@ import SwiftUI
 struct TaskView: View {
     let Jobs : [Job]
     var body: some View {
-        VStack{
-            List(Jobs){job in
-                Text(job.name).padding().font(.title2)
-                ForEach(job.subTasks){ subtask in
-                    Text(subtask.name).padding(.leading, 20)
+        List{
+            ForEach(JobStatus.allCases){status in
+                Section(status.id){
+                    ForEach(Jobs.filter {$0.status == status}){job in
+                        Text(job.name).padding().font(.title2)
+                        ForEach(job.subTasks){ subtask in
+                            Text(subtask.name).padding(.leading, 20)
+                        }
+                    }
                 }
             }
+            
         }
     }
 }
