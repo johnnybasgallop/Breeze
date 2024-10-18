@@ -6,17 +6,23 @@
 //
 
 import SwiftUI
+import Foundation
+
+let screenwidth = NSScreen.main?.visibleFrame.size.width
+let screenHeight = NSScreen.main?.visibleFrame.size.height
 
 @main
 struct BreezeApp: App {
     var body: some Scene {
         WindowGroup {
-                ContentView()
-                    .frame(minWidth: 100, maxWidth: 400, minHeight: 100, maxHeight: 400)
-            }
-            .defaultSize(width: 400, height: 400)
-            .windowResizability(.contentSize)
+            ContentView( ListCategories: [ListCategory.example(generalTitle: "General Chores", fakeJobName: "Take out the bins"), ListCategory.example(generalTitle: "Homework", fakeJobName: "Begin studying for AP final")])
+                .frame(minWidth: 650, maxWidth: 1000, minHeight: 500, maxHeight: screenHeight != nil ? screenHeight! - 20 : 900)
+        }
+        .defaultSize(width: 400, height: 400)
+        .windowResizability(.contentSize)
     }
 }
+
+
 
 
