@@ -15,6 +15,8 @@
 		CA5992112CC2F5340017A230 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5992102CC2F5340017A230 /* ListModel.swift */; };
 		CA5992132CC2F8C40017A230 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5992122CC2F8C40017A230 /* Sidebar.swift */; };
 		CA5992152CC2FE1E0017A230 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5992142CC2FE1E0017A230 /* TaskView.swift */; };
+		CA59921B2CC437850017A230 /* inProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921A2CC437850017A230 /* inProgressWidget.swift */; };
+		CA59921D2CC43E300017A230 /* NoBackgroundButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CA5992102CC2F5340017A230 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		CA5992122CC2F8C40017A230 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		CA5992142CC2FE1E0017A230 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		CA59921A2CC437850017A230 /* inProgressWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inProgressWidget.swift; sourceTree = "<group>"; };
+		CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBackgroundButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		CA5991FC2CC29BB50017A230 /* Breeze */ = {
 			isa = PBXGroup;
 			children = (
+				CA5992162CC437480017A230 /* Views */,
 				CA59920F2CC2F5180017A230 /* Models */,
 				CA59920C2CC29F050017A230 /* Utilities */,
 				CA5991FD2CC29BB50017A230 /* BreezeApp.swift */,
@@ -67,8 +72,6 @@
 				CA5992012CC29BB70017A230 /* Assets.xcassets */,
 				CA5992062CC29BB70017A230 /* Breeze.entitlements */,
 				CA5992032CC29BB70017A230 /* Preview Content */,
-				CA5992122CC2F8C40017A230 /* Sidebar.swift */,
-				CA5992142CC2FE1E0017A230 /* TaskView.swift */,
 			);
 			path = Breeze;
 			sourceTree = "<group>";
@@ -85,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				CA59920D2CC29F130017A230 /* VisualEffectBlur.swift */,
+				CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -95,6 +99,40 @@
 				CA5992102CC2F5340017A230 /* ListModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CA5992162CC437480017A230 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA5992182CC4375B0017A230 /* TaskView */,
+				CA5992172CC437530017A230 /* SiderBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA5992172CC437530017A230 /* SiderBar */ = {
+			isa = PBXGroup;
+			children = (
+				CA5992122CC2F8C40017A230 /* Sidebar.swift */,
+			);
+			path = SiderBar;
+			sourceTree = "<group>";
+		};
+		CA5992182CC4375B0017A230 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				CA5992192CC437700017A230 /* components */,
+				CA5992142CC2FE1E0017A230 /* TaskView.swift */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
+		CA5992192CC437700017A230 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CA59921A2CC437850017A230 /* inProgressWidget.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +207,10 @@
 			files = (
 				CA5992132CC2F8C40017A230 /* Sidebar.swift in Sources */,
 				CA59920E2CC29F130017A230 /* VisualEffectBlur.swift in Sources */,
+				CA59921D2CC43E300017A230 /* NoBackgroundButtonStyle.swift in Sources */,
 				CA5992002CC29BB50017A230 /* ContentView.swift in Sources */,
 				CA5992152CC2FE1E0017A230 /* TaskView.swift in Sources */,
+				CA59921B2CC437850017A230 /* inProgressWidget.swift in Sources */,
 				CA5991FE2CC29BB50017A230 /* BreezeApp.swift in Sources */,
 				CA5992112CC2F5340017A230 /* ListModel.swift in Sources */,
 			);

@@ -11,7 +11,6 @@ struct Sidebar: View {
     @Binding var ListCategories : [ListCategory]
     @Binding var selection : JobStatus
     var body: some View {
-        VStack{
             List(selection: $selection){
                 ForEach(ListCategories){category in
                     HStack{
@@ -22,17 +21,18 @@ struct Sidebar: View {
                             print("clicked")
                         }, label: {
                             Image(systemName: "ellipsis")
-                        })
+                        }).buttonStyle(NoBackgroundButtonStyle())
                     }
                     .tag(JobStatus.list(category))
                 }.onMove { from, to in
                     ListCategories.move(fromOffsets: from, toOffset: to)
                 }
             }
-        }
+            .listStyle(SidebarListStyle())
+            .frame(minWidth: 200, idealWidth: 225, maxWidth: 300)
     }
 }
 
 #Preview {
-    Sidebar(ListCategories: .constant([ListCategory.example(generalTitle: "General Chores", fakeJobName: "Take out the bins"), ListCategory.example(generalTitle: "Homework", fakeJobName: "Begin studying for AP final")]), selection: .constant(.todo))
+    Sidebar(ListCategories: .constant(previewExamples.examples()),selection: .constant(.todo))
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selected = "item1"
-    @State private var ListCategories : [ListCategory] = [ListCategory.example(generalTitle: "General Chores", fakeJobName: "Take out the bins"), ListCategory.example(generalTitle: "Homework", fakeJobName: "Begin studying for AP final")]
+    @State private var ListCategories : [ListCategory] = previewExamples.examples()
     
     @State private var Selection = JobStatus.todo
     
