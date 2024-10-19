@@ -11,11 +11,9 @@ struct inProgressWidget: View {
     let Jobs : [Job]
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 5)
+            RoundedRectangle(cornerRadius: 15)
                 .fill(Color.gray.opacity(0.7))
                 .frame(maxWidth: .infinity, maxHeight: 350)
-//                .frame(height: 300)
-            
             
             VStack(alignment: .leading, spacing: 0){
                 ForEach(Jobs.filter {$0.status == .inProgress}){job in
@@ -25,18 +23,16 @@ struct inProgressWidget: View {
                         AddTaskButton()
                     }
                     .padding(.horizontal)
-                    .padding(.bottom)
+                    .padding(.bottom, 10)
                     ScrollView(showsIndicators: false){
                         ForEach(job.subTasks){ subtask in
                             SubTaskComponenet(name: subtask.name)
-                            SubTaskComponenet(name: subtask.name)
                         }
-                    }
+                    }.padding(.bottom, 5)
                 }
             }
             .padding(.vertical, 5)
             .frame(maxWidth: .infinity, maxHeight: 350)
-//            .frame(height: 300)
         }.padding(.vertical)
     }
 }
@@ -47,17 +43,17 @@ struct SubTaskComponenet: View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
                 .frame(maxWidth: .infinity)
-                .frame(height: 50)
+                .frame(height: 60)
                 .padding(.horizontal)
             
             HStack{
-                Text(name).foregroundStyle(.black)
+                Text(name).foregroundStyle(.black).font(.system(size: 16))
                 Spacer()
                 Circle().fill(.clear).stroke(.black).frame(height: 20)
             }
             .padding(.horizontal, 30)
             .frame(maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(height: 60)
         }
     }
 }
@@ -74,9 +70,10 @@ struct InProgressTitleAndMore: View {
             Button(action: {
                 print("more pressed")
             }, label: {
-                Image(systemName: "ellipsis")
+                Image(systemName: "ellipsis").font(.system(size: 20))
             })
             .padding(.top, 10)
+            .padding(.bottom)
             .buttonStyle(NoBackgroundButtonStyle())
         }
         .padding(.top, 5)
@@ -92,9 +89,10 @@ struct AddTaskButton: View {
         }, label: {
             HStack(alignment: .center, spacing: 5){
                 Image(systemName: "plus")
-                Text("add task").font(.system(size: 15, weight: .regular))
+                Text("Add task").font(.system(size: 15, weight: .regular))
             }
         })
+//        .padding(.top, 5)
         .buttonStyle(NoBackgroundButtonStyle())
     }
 }

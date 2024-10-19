@@ -18,12 +18,11 @@ struct TaskView: View {
                         inProgressWidget(Jobs: Jobs)
                         
                     case .todo:
-                        ForEach(Jobs.filter {$0.status == status}){job in
-                            Text(job.name).font(.title3).underline()
-                            ForEach(job.subTasks){ subtask in
-                                Text(subtask.name)
+                        VStack{
+                            ForEach(Jobs.filter {$0.status == status}){job in
+                                TodoComponent(name: job.name)
                             }
-                        }
+                        }.padding(.top)
                         
                     case .done:
                         ForEach(Jobs.filter {$0.status == status}){job in
@@ -36,9 +35,6 @@ struct TaskView: View {
                     default:
                         Text("nothing to show")
                     }
-                    
-              
-                 
                 }
             }
             

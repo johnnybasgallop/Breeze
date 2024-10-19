@@ -17,6 +17,7 @@
 		CA5992152CC2FE1E0017A230 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5992142CC2FE1E0017A230 /* TaskView.swift */; };
 		CA59921B2CC437850017A230 /* inProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921A2CC437850017A230 /* inProgressWidget.swift */; };
 		CA59921D2CC43E300017A230 /* NoBackgroundButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */; };
+		CA59921F2CC446670017A230 /* TodoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921E2CC446670017A230 /* TodoComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CA5992142CC2FE1E0017A230 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		CA59921A2CC437850017A230 /* inProgressWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inProgressWidget.swift; sourceTree = "<group>"; };
 		CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBackgroundButtonStyle.swift; sourceTree = "<group>"; };
+		CA59921E2CC446670017A230 /* TodoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				CA59921A2CC437850017A230 /* inProgressWidget.swift */,
+				CA59921E2CC446670017A230 /* TodoComponent.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				CA5992152CC2FE1E0017A230 /* TaskView.swift in Sources */,
 				CA59921B2CC437850017A230 /* inProgressWidget.swift in Sources */,
 				CA5991FE2CC29BB50017A230 /* BreezeApp.swift in Sources */,
+				CA59921F2CC446670017A230 /* TodoComponent.swift in Sources */,
 				CA5992112CC2F5340017A230 /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
