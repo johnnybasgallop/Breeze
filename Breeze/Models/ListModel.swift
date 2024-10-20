@@ -11,13 +11,11 @@ struct ListCategory: Identifiable, Hashable {
     var id = UUID()
     var name: String
     var jobs: [Job]
-    var iconName: String
     
-    init(id: UUID = UUID(), name: String, jobs: [Job], iconName: String = "folder") {
+    init(id: UUID = UUID(), name: String, jobs: [Job]) {
         self.id = id
         self.name = name
         self.jobs = jobs
-        self.iconName = iconName
     }
 }
 

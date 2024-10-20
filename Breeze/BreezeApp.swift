@@ -16,10 +16,12 @@ struct BreezeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.dark)
                 .frame(minWidth: 650, maxWidth: 1000, minHeight: 500, maxHeight: screenHeight != nil ? screenHeight! - 20 : 900)
         }
         .defaultSize(width: 400, height: 400)
         .windowResizability(.contentSize)
+        
     }
 }
 

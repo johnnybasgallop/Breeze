@@ -9,8 +9,10 @@ import SwiftUI
 
 struct TaskView: View {
     let Jobs : [Job]
+    @State private var isPresented: Bool = false
     var body: some View {
         List{
+            NewJobInput(isPresented: $isPresented)
             ForEach(JobStatus.allCases){status in
                 Section(header:Text(String(status.id).capitalized).font(.title3)){
                     switch status{
@@ -38,7 +40,12 @@ struct TaskView: View {
                 }
             }
             
-        }.listStyle(SidebarListStyle())
+        }
+        .listStyle(SidebarListStyle())
+        .sheet(isPresented: $isPresented){
+           AddJobSheet(isPresented: $isPresented)
+                .frame(minWidth: 400, idealWidth: 500, maxWidth: 600, minHeight: 180, idealHeight: 275, maxHeight: 300)
+        }
     }
 }
 

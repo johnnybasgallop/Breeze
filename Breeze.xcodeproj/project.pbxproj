@@ -18,6 +18,8 @@
 		CA59921B2CC437850017A230 /* inProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921A2CC437850017A230 /* inProgressWidget.swift */; };
 		CA59921D2CC43E300017A230 /* NoBackgroundButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */; };
 		CA59921F2CC446670017A230 /* TodoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59921E2CC446670017A230 /* TodoComponent.swift */; };
+		CA5992212CC53B300017A230 /* NewJobInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5992202CC53B300017A230 /* NewJobInput.swift */; };
+		CA5992232CC54E170017A230 /* AddJobSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5992222CC54E170017A230 /* AddJobSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CA59921A2CC437850017A230 /* inProgressWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inProgressWidget.swift; sourceTree = "<group>"; };
 		CA59921C2CC43E300017A230 /* NoBackgroundButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBackgroundButtonStyle.swift; sourceTree = "<group>"; };
 		CA59921E2CC446670017A230 /* TodoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoComponent.swift; sourceTree = "<group>"; };
+		CA5992202CC53B300017A230 /* NewJobInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobInput.swift; sourceTree = "<group>"; };
+		CA5992222CC54E170017A230 /* AddJobSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 			children = (
 				CA59921A2CC437850017A230 /* inProgressWidget.swift */,
 				CA59921E2CC446670017A230 /* TodoComponent.swift */,
+				CA5992202CC53B300017A230 /* NewJobInput.swift */,
+				CA5992222CC54E170017A230 /* AddJobSheet.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -210,11 +216,13 @@
 			files = (
 				CA5992132CC2F8C40017A230 /* Sidebar.swift in Sources */,
 				CA59920E2CC29F130017A230 /* VisualEffectBlur.swift in Sources */,
+				CA5992232CC54E170017A230 /* AddJobSheet.swift in Sources */,
 				CA59921D2CC43E300017A230 /* NoBackgroundButtonStyle.swift in Sources */,
 				CA5992002CC29BB50017A230 /* ContentView.swift in Sources */,
 				CA5992152CC2FE1E0017A230 /* TaskView.swift in Sources */,
 				CA59921B2CC437850017A230 /* inProgressWidget.swift in Sources */,
 				CA5991FE2CC29BB50017A230 /* BreezeApp.swift in Sources */,
+				CA5992212CC53B300017A230 /* NewJobInput.swift in Sources */,
 				CA59921F2CC446670017A230 /* TodoComponent.swift in Sources */,
 				CA5992112CC2F5340017A230 /* ListModel.swift in Sources */,
 			);
